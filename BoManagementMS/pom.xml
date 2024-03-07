@@ -8,17 +8,14 @@
 		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	
 	<groupId>iut.montreuil</groupId>
-	<artifactId>DbManagementMS</artifactId>
+	<artifactId>BoManagementMS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DbManagementMS</name>
-	<description>Management of the database</description>
-	
+	<name>BoManagementMS</name>
+	<description>Bo for the project</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
-	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,33 +28,25 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- Add the Spring Data JPA starter dependency -->
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-		<dependency>
-		    <groupId>org.postgresql</groupId>
-		    <artifactId>postgresql</artifactId>
-		    <version>42.6.0</version>
-		</dependency>
-		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-web</artifactId>
 		    <version>6.1.4</version>
 		</dependency>
-			
+		
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		
+		<!-- Add the Spring Data JPA starter dependency -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
 	</dependencies>
-
 
 	<build>
 		<plugins>

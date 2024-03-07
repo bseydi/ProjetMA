@@ -1,13 +1,13 @@
-package com.example.AuthManagementMS;
+package iut.montreuil.BoManagementMS.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AuthManagementMsApplication {
+public class BoManagementMsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AuthManagementMsApplication.class, args);
+		SpringApplication.run(BoManagementMsApplication.class, args);
 	}
 
 }
