@@ -17,36 +17,24 @@ import iut.montreuil.BoManagementMS.app.model.Annonce;
 @RestController
 @RequestMapping("/boannonce")
 public class BoAnnonceController {
-	
+
 	@Autowired
 	private BoAnnonceService boAnnonceService;
-	
+
 	@GetMapping("get")
 	public List<Annonce> getAllAnnonces(@RequestHeader("Authorization") String token) throws Exception {
-		if (token.equals("jwt-token-for-admin") || token.equals("jwt-token-for-normal-user")) {
-			return boAnnonceService.getAllAnnonces();	
-		} else {
-			throw new Exception("Access denied: Insufficient privileges.");
-		}
+		return boAnnonceService.getAllAnnonces();	
 	}
-	
+
 	@GetMapping("get/{id}")
 	public Optional<Annonce> getAnnonceById(@PathVariable Long id, @RequestHeader("Authorization") String token) throws Exception {
-		if (token.equals("jwt-token-for-admin") || token.equals("jwt-token-for-normal-user")) {
-			return boAnnonceService.getAnnonceById(id);	
-		} else {
-			throw new Exception("Access denied: Insufficient privileges.");
-		}
+		return boAnnonceService.getAnnonceById(id);	
 	}
-	
+
 	@DeleteMapping
-    @RequestMapping("delete/{id}")
-    public String deleteAnnonce(@PathVariable Long id, @RequestHeader("Authorization") String token) {    
-        if (token.equals("jwt-token-for-admin")) {
-            boAnnonceService.deleteAnnonce(id);
-            return "Annonce " + id + " has been deleted successfully.";
-        } else {
-            return "Access denied: Insufficient privileges.";
-        }
-    }
+	@RequestMapping("delete/{id}")
+	public String deleteAnnonce(@PathVariable Long id, @RequestHeader("Authorization") String token) {    
+		boAnnonceService.deleteAnnonce(id);
+		return "Annonce " + id + " has been deleted successfully.";
+	}
 }
