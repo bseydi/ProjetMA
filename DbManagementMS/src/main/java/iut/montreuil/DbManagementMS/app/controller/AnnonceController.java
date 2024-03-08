@@ -23,7 +23,6 @@ public class AnnonceController {
 	
 	@GetMapping("get")
 	public List<Annonce> getAllAnnonces() {
-		System.err.println(annonceService.getAllAnnonces());
 		return annonceService.getAllAnnonces();
 	}
 	
