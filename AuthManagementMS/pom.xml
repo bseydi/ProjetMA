@@ -30,8 +30,8 @@
 		</dependency>
 		
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-security</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
@@ -41,34 +41,15 @@
 		    <version>6.1.4</version>
 		</dependency>
 		
-		
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-core</artifactId>
-		    <version>6.2.2</version>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+		<!-- Add the Spring Data JPA starter dependency -->
 		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-config</artifactId>
-		    <version>6.2.2</version>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-web</artifactId>
-		    <version>6.2.2</version>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-test -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-test</artifactId>
-		    <version>6.2.2</version>
-		    <scope>test</scope>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 	</dependencies>

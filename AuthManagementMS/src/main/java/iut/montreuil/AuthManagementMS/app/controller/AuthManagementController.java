@@ -1,5 +1,6 @@
 package iut.montreuil.AuthManagementMS.app.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,18 +15,17 @@ import iut.montreuil.AuthManagementMS.app.service.AuthManagementService;
 @RequestMapping("/auth")
 public class AuthManagementController {
 
-	AuthManagementService authManagementService;
+	@Autowired
+	private AuthManagementService authManagementService;
 	
-	@PostMapping("/login")
-	public String login(@RequestBody LoginRequest loginRequest) {
-		System.out.println("Ok AUTH");
-		return "ok";
-		//ResponseEntity<String>
-//		try {
-//			String token = authManagementService.authenticate(loginRequest.getUsername(), loginRequest.getPassword());
-//			return ResponseEntity.ok(token);
-//		} catch (IllegalArgumentException e) {
-//			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
-//		}
+	@PostMapping
+	@RequestMapping("login")
+	public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
+		try {
+			String token = authManagementService.authenticate(loginRequest.getUsername(), loginRequest.getPassword());
+			return ResponseEntity.ok(token);
+		} catch (IllegalArgumentException e) {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
+		}
 	}
 }

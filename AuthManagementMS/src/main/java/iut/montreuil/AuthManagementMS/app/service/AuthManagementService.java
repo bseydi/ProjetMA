@@ -1,5 +1,8 @@
 package iut.montreuil.AuthManagementMS.app.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class AuthManagementService {
 
 	private static final String NORMAL_USER_USERNAME = "user";
